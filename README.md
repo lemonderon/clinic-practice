@@ -16,7 +16,7 @@ Requires the latest patch release of Python 3.12, 3.13, or 3.14. Run these comma
    # for linux/macos
    source .venv/bin/activate
    # for Windows:
-   .venv\Scripts\activate.ps1 
+   .venv\Scripts\activate
    ```
 
 2. Install dependencies:
