@@ -65,14 +65,21 @@ python manage.py createsuperuser
    ```
 
 2. Add its generated configuration class, `myapp.apps.MyappConfig`, to
-   `INSTALLED_APPS` in `mysite/settings.py`.
+   `INSTALLED_APPS` in `config/settings.py`.
 3. Define your views and create `myapp/urls.py` with their URL patterns.
-4. Register that URLconf in `mysite/urls.py` using `path()` and `include()`,
+4. Register that URLconf in `config/urls.py` using `path()` and `include()`,
    choosing a URL prefix for the app and retaining the admin route.
 
 See the official Django 6.1 tutorial for
 [views and URL registration](https://docs.djangoproject.com/en/6.1/intro/tutorial01/)
 and [app registration and models](https://docs.djangoproject.com/en/6.1/intro/tutorial02/).
+
+## Git attributes
+
+Git detects text files automatically and normalizes them to LF. Checkouts use
+LF on Linux and Windows, while `.bat` and `.cmd` files use CRLF. Binary files
+are auto-detected and left unchanged, helping avoid newline-only diffs.
+
 
 ## Code style and submission verification
 
