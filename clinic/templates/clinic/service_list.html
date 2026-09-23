@@ -1,0 +1,39 @@
+{% extends "clinic/base.html" %}
+{% block title %}Послуги | Ветеринарна клініка «Північна зірка»{% endblock %}
+{% block content %}
+  <section class="intro">
+    <p class="eyebrow">Довідник ветеринарних послуг</p>
+    <h1>Ветеринарні послуги</h1>
+    <p>Перегляньте послуги з профілактики та лікування, доступні у відділеннях ветеринарної клініки «Північна зірка».</p>
+  </section>
+  <section class="service-grid" aria-label="Послуги клініки">
+    {% for service in services %}
+      <article class="service-card">
+        <p class="service-code">{{ service.code }}</p>
+        <h2>{{ service.name }}</h2>
+        <dl class="details-list">
+          <dt>Опис</dt>
+          <dd>
+            {{ service.description|truncatewords:50 }}
+          </dd>
+          <dt>Координатор</dt>
+          <dd>
+            {{ service.coordinator_name }}
+          </dd>
+          <dt>Контактні дані</dt>
+          <dd>
+            {{ service.coordinator_contact }}
+          </dd>
+          <dt>Відділення</dt>
+          <dd>{{ service.branch.name }}</dd>
+          <dt>Підготовка</dt>
+          <dd>
+            {{ service.preparation|linebreaksbr }}
+          </dd>
+        </dl>
+      </article>
+    {% empty %}
+      <p>Послуг поки не опубліковано.</p>
+    {% endfor %}
+  </section>
+{% endblock %}

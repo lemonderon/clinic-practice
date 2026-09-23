@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Ветеринарна клініка «Північна зірка»{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'clinic/style.css' %}">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="page-shell header-inner">
+        <span class="brand">Ветеринарна клініка «Північна зірка»</span>
+        <nav aria-label="Основна навігація">
+          <a href="{% url 'clinic:service-list' %}">Послуги</a>
+        </nav>
+      </div>
+    </header>
+    <main class="page-shell">
+      {% block content %}{% endblock %}
+    </main>
+    <footer class="page-shell site-footer">
+      Турботлива ветеринарна допомога в кожному відділенні клініки «Північна зірка».
+    </footer>
+  </body>
+</html>
