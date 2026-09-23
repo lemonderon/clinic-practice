@@ -18,7 +18,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+from clinic import views
+
 urlpatterns = [
+    path("", views.home, name="home"),
     path("services/", include("clinic.urls")),
+    path("branches/<int:pk>/", views.branch_detail, name="branch-detail"),
     path("admin/", admin.site.urls),
 ]

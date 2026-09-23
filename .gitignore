@@ -54,6 +54,8 @@ cover/
 
 # Translations
 *.mo
+# Ship this catalog so the Ukrainian UI does not require gettext tooling at runtime.
+!clinic/locale/uk/LC_MESSAGES/django.mo
 *.pot
 
 # Django stuff:

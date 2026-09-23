@@ -1,0 +1,18 @@
+{% extends "clinic/base.html" %}
+{% block title %}{{ branch.name }} | Ветеринарна клініка «Північна зірка»{% endblock %}
+{% block content %}
+  <p class="eyebrow">Інформація про відділення</p>
+  <article class="detail-panel">
+    <h1>{{ branch.name }}</h1>
+    <p><strong>Керівник:</strong> {{ branch.manager_name }}</p>
+    <h2>Послуги у цьому відділенні</h2>
+    <ul>
+      {% for service in branch.services.all %}
+        <li><a class="text-link"
+   href="{% url 'clinic:service-detail' service.pk %}">{{ service.code }} - {{ service.name }}</a></li>
+      {% empty %}
+        <li>У цьому відділенні поки не опубліковано жодної послуги.</li>
+      {% endfor %}
+    </ul>
+  </article>
+{% endblock %}

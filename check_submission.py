@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cross-platform verification and formatting utility for Django student projects.
+"""Cross-platform verification and formatting utility for this Django project.
 
 Usage:
   python check_submission.py           # Check PEP-8, Django, HTML templates, and CSS/JS
@@ -176,9 +176,7 @@ def process_static_files(format_mode: bool) -> bool:
 
 
 def main():
-    parser = argparse.ArgumentParser(
-        description="Verify or format Django student submissions."
-    )
+    parser = argparse.ArgumentParser(description="Verify or format the Django project.")
     parser.add_argument(
         "--format",
         "-f",
@@ -215,8 +213,8 @@ def main():
         )
         sys.exit(0)
 
-    # CHECK / GRADING MODE
-    print(f"{BOLD}{CYAN}=== VERIFYING PROJECT COMPLIANCE ==={RESET}")
+    # CHECK MODE
+    print(f"{BOLD}{CYAN}=== RUNNING PROJECT CHECKS ==={RESET}")
     all_passed = True
 
     # 1. PEP-8, PEP-8 naming, and Django rules
@@ -245,9 +243,7 @@ def main():
         )
         sys.exit(1)
 
-    print(
-        f"{GREEN}{BOLD}ALL CHECKS PASSED:{RESET} Project conforms to grading standards."
-    )
+    print(f"{GREEN}{BOLD}ALL CHECKS PASSED:{RESET} Project meets configured standards.")
     sys.exit(0)
 
 

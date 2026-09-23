@@ -1,0 +1,23 @@
+{% extends "clinic/base.html" %}
+{% block title %}{% if clinic_info %}{{ clinic_info.name }}{% else %}Інформація про клініку{% endif %}{% endblock %}
+{% block content %}
+  {% if clinic_info %}
+    <section class="intro">
+      <p class="eyebrow">Ласкаво просимо</p>
+      <h1>{{ clinic_info.name }}</h1>
+      {{ clinic_info.description|linebreaks }}
+    </section>
+    <section class="detail-panel" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Зв’язатися з нами</h2>
+      <p>{{ clinic_info.contacts|linebreaksbr }}</p>
+      <p><a class="text-link" href="{% url 'clinic:service-list' %}">Переглянути наші послуги</a></p>
+    </section>
+  {% else %}
+    <section class="intro">
+      <p class="eyebrow">Ласкаво просимо</p>
+      <h1>Інформація про клініку</h1>
+      <p>Інформація про клініку поки недоступна.</p>
+      <p><a class="text-link" href="{% url 'clinic:service-list' %}">Переглянути доступні послуги</a></p>
+    </section>
+  {% endif %}
+{% endblock %}

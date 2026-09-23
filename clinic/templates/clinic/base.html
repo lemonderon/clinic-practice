@@ -10,8 +10,9 @@
   <body>
     <header class="site-header">
       <div class="page-shell header-inner">
-        <span class="brand">Ветеринарна клініка «Північна зірка»</span>
+        <a class="brand" href="{% url 'home' %}">Ветеринарна клініка «Північна зірка»</a>
         <nav aria-label="Основна навігація">
+          <a href="{% url 'home' %}">Головна</a>
           <a href="{% url 'clinic:service-list' %}">Послуги</a>
         </nav>
       </div>

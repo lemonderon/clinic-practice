@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Verify Submission" type="PythonConfigurationType" factoryName="Python">
-    <module name="web-programming-2026-template" />
+  <configuration default="false" name="Verify Project" type="PythonConfigurationType" factoryName="Python">
+    <module name="clinic-practice" />
     <option name="ENV_FILES" value="" />
     <option name="INTERPRETER_OPTIONS" value="" />
     <option name="PARENT_ENVS" value="true" />
