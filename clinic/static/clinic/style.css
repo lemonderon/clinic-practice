@@ -1,0 +1,154 @@
+:root {
+  --main-text: #ffedea;
+  --primary: #ffb4a8;
+  --on-primary: #680016;
+  --warning: #ffb68a;
+  --on-warning: #5a2600;
+  --cross-reference: #c4d9ff;
+  --on-cross-reference: #0a2a5a;
+  --success: #9be6b4;
+  --on-success: #0a3a1d;
+  color: var(--main-text);
+  background: #1f1416;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.page-shell {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.brand,
+.site-header a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.brand {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a:hover,
+nav a:focus-visible,
+a.text-link:hover,
+a.text-link:focus-visible {
+  text-decoration: underline;
+}
+
+main {
+  padding: 3rem 0;
+}
+
+.intro {
+  max-width: 42rem;
+  margin-bottom: 2rem;
+}
+
+.eyebrow,
+.service-code {
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+}
+
+h1 {
+  margin: 0.35rem 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.25rem;
+}
+
+.service-card,
+.detail-panel {
+  background: #2b1c20;
+  border: 1px solid var(--primary);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 1.5rem rgb(0 0 0 / 20%);
+  padding: 1.35rem;
+}
+
+.service-card h2 {
+  margin-top: 0.3rem;
+}
+
+.details-list {
+  margin: 0;
+}
+
+.details-list dt {
+  color: var(--main-text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.details-list dd {
+  margin: 0.2rem 0 0;
+}
+
+.site-footer {
+  border-top: 1px solid var(--primary);
+  color: var(--main-text);
+  font-size: 0.9rem;
+  padding: 1.5rem 0 2rem;
+}
+
+a.text-link {
+  color: var(--cross-reference);
+}
+
+.warning {
+  background: var(--warning);
+  color: var(--on-warning);
+}
+
+.cross-reference {
+  background: var(--cross-reference);
+  color: var(--on-cross-reference);
+}
+
+.success {
+  background: var(--success);
+  color: var(--on-success);
+}
